@@ -1,0 +1,42 @@
+
+/* ...INICIO: Configuracion de Layout*/
+
+	
+/* FIN configuracion Layout*/
+/*..INICIO: Configuracion formulario de Administracion de Compras*/
+.pieFormulario label{
+		margin-left:35%;
+		line-height: 23px;
+		width: 110px;
+
+	}
+	
+	.pieFormulario span{
+		margin-left:15px;
+		line-height: 23px;
+	/*	width: 35%;*/
+		font-weight: bold;
+		color: #444444;
+
+	}
+	.pieFormulario p {
+		margin-top: 4px;
+	
+	}
+		
+/*FIN: Configuracion formulario*/
+
+/*..INICIO: Configuracion de la tablas*/
+
+	.divIzquierdo .alturaFija{
+		height: 300px;
+
+	}
+	
+	.tablaListado{
+	cursor: pointer;
+	
+	} 
+
+
+/*..FIN: Configuracion de la tablas*/

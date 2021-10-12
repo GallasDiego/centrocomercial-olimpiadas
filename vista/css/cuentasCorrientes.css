@@ -1,0 +1,40 @@
+.listados{
+    border-radius: 5px;
+    border: 2px solid #888;
+    padding: 10px;
+    height: 270px;
+}
+.nuevo{
+	vertical-align: middle;
+	padding-left: 10px;
+}
+#formDerecho label{
+	width: 50px;
+}
+/*#formDetalle span{
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    float: right;
+    font-style : italic;
+}*/
+.labelFechaHora{        
+    font-style : italic;
+    padding-left: 10px;
+}
+#formIzquierdo span{
+    font-weight: bold;
+    font-style : italic;
+    font-size: 14px;
+    padding-right: 5px;
+}
+#formIzquierdo .legend{
+    font-size: 19px;
+
+}
+.listados #pedido{
+    width: 105px;
+}
+.listados #fecha{
+    width: 56px;
+}

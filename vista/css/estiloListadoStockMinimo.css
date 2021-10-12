@@ -1,0 +1,76 @@
+/*  INICIO: configuración de estilo de Listado de Stock Minimo*/
+
+	/*.divDerecho .scrool{
+			
+		overflow-y: scroll;
+		height:26%;
+			
+	}*/
+
+	
+	
+	.contenedorCabeceraTabla table thead tr th {
+		width: 2%;
+    }
+	
+	 .contenedorCabeceraTabla table thead tr th + th {
+		width: 6%;
+	}
+	
+	.contenedorCuerpoTabla table tbody tr td {
+		width: 2%;
+	}
+	
+	.contenedorCuerpoTabla table tbody tr td + td {
+		width:7%;
+	}
+	
+
+	
+	
+	
+	.contenedorCuerpoTabla {
+		
+		height: 130px;
+	}
+	
+	
+	.tablaListado input{
+			
+		margin-left: 45%;
+			
+	}
+	
+	
+	
+	
+	.contenedorCabeceraTabla ,  .contenedorCuerpoTabla {
+    width: 45%;
+  
+	}	
+	
+	#tbodyTablaListadoTarjetas label{
+	
+		color: #444;
+		float: none;
+		font-weight: normal;
+		line-height: auto;
+		margin-right: 0;
+		width: auto;
+		display: block;
+		cursor: pointer;
+			
+	
+	
+	}
+	
+	#tbodyTablaListadoTarjetas label:after {
+		content: "";
+}
+	
+
+	
+	
+	
+
+/*  FIN: configuración de estilo de Listado de Stock Minimo */

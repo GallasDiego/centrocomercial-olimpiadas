@@ -1,0 +1,73 @@
+﻿/*INICIO: Configuracion del menu*/
+	.divSuperior{
+		width:95%;
+		height: 25%;
+	
+	}
+	
+	.divInferior {
+		width:95%;
+		margin-top:5%;
+	}
+	
+	.divSuperior span{
+		margin-right:6px;
+		line-height: 24px;
+		color: #444444;
+	 }
+	 .divSuperior .textoInformativo{
+		width: 100%;
+	 
+	 }
+	
+	.transferencia label {
+		margin-left: 20px;
+		margin-right: 0px;
+	}
+	.transferencia select{
+		margin-left: 175px;
+	
+	}
+	.fechaHoraActual .divDerecho span{
+		
+		margin-left: 20%;
+	
+	}
+	
+	.fechaHoraActual .divIzquierdo span{
+		
+		margin-left: 10px;
+	
+	}
+	.fechaHoraActual .divIzquierdo label{
+		
+		width: 12%;
+	
+	}
+	.fechaHoraActual .divDerecho label{
+		
+		width: 12%;
+	
+	}
+	
+	
+	.divDerecho label{
+		white-space: nowrap;
+	}
+	.divDerecho span{
+		line-height: 24px;
+		margin-left: 10px;
+	}
+	.divIzquierdo span{
+		line-height: 24px;
+		margin-left: 10px;
+	}
+	
+	.divInferior  .listadoTransferencia{
+			
+		height: 35%;
+		overflow-y: scroll;
+	
+	}
+	
+/*FIN: Configuracion del menu */

@@ -1,0 +1,73 @@
+/* CSS Document */
+.fechaHora{
+	text-align : right;		
+}
+.fechaHora .labelFechaHora{		
+	text-decoration : underline;
+	font-style : italic;
+}
+.fechaHora .fechaHoraActual{
+	font-weight : bold;
+}
+.fechaHora .labelFechaHora:after{
+	content : ":";
+	text-decoration : none;
+}
+.abmForm label{
+	width : 150px;
+}
+.divIzquierdo fieldset div, .divDerecho fieldset div {
+	height : 210px;
+}
+.divIzquierdo fieldset , .divDerecho fieldset  {
+	height : 280px;
+}
+.divDerecho fieldset div{
+	overflow-y : scroll;
+}
+.abmForm .numeroCorto{
+	width: 80px;
+	text-align: right;	
+}
+.busquedaIncremental{
+	text-align : right;
+	vertical-align : middle;
+}
+.busquedaIncremental label{		
+	float : none;
+}
+.busquedaIncremental label:after{
+	content : " ";		
+}
+.tablaImputacion{
+	/*height : 154px;*/
+	overflow-y : scroll;
+}
+.alinearDerecha{
+	text-align : right;
+	float:right;
+}
+.fechas .labelFechaHora{		
+	text-decoration : underline;
+	font-style : italic;
+}
+.fechas .fechaHoraActual{
+	font-weight : bold;
+}
+p.tituloCentrado{
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+}
+.listados1{
+    border-radius: 5px;
+    border: 2px solid #888;
+    padding: 10px;
+    height: 200px;
+}
+.listados2{
+    border-radius: 5px;
+    border: 2px solid #888;
+    padding: 10px;
+    height: 240px;
+}

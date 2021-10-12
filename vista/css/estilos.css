@@ -1,0 +1,640 @@
+/* ------------------------ INICIO: configuraciones generales ------------------------ */
+
+/* Selector universal: son seleccionados TODOS los elementos del documento html */
+* {
+    margin: 0; /* Reseteamos los margenes que traen por defecto cada navegador */
+    padding: 0; /* Reseteamos los rellenos que traen por defecto cada navegador */
+}
+
+/* Seleccionamos el BODY del documento */
+body {
+    font-family: Arial,Helvetica,sans-serif; /* Establecemos la tipografía del documento */
+    font-size: 12px; /* Establecemos el tamaño de la tipografía */
+}
+
+/* Seleccionamos los DIVs (bloques), porciones de contenido del documento */
+div {
+    position: relative; /* Establecemos la posición a relativa */
+}
+
+/* Seleccionamos parrafos del documento */
+p {
+    margin: 10px 0; /* Establecemos los margenes superior/inferior a 10px, y lo laterales izq/der a cero 0px */
+    line-height: 16px; /* Establecemos la altura del interlineado */
+}
+
+/* ------------------------ FIN: configuraciones generales ------------------------ */
+
+/* ------------------------ INICIO: configuraciones de Layouts (dispocicion de la pagina) ------------------------ */
+
+/* Clase para centrar el contenido de este elemento */
+.clearOne {
+    clear: both;
+}
+.envoltura {
+    margin: 0 auto; /* Eliminamos los margenes superior/inferior, y a los laterales automático => centramos horizontalmente*/
+}
+
+/* Envoltura Principal de la pagina */
+#envolturaPrincipal {
+    width: 100%; /* Establecemos el ancho al total del navegador */
+}
+
+    /* ------------------ INICIO: Parte Superior de la pagina ------------------ */
+    #top {
+        height: 50px; /* Altura fija de la parte superior */
+        background-color: #C4C4C4;
+        margin-bottom: 20px;
+    }
+    
+        .logo {
+            width: 15%;
+            height: 100%;
+        }
+
+        #logo1 {
+            float: left;
+        }
+        
+        #logo2 {
+            float: right;
+        }
+
+        #cabecera {
+            float: left;
+            width: 70%;
+            height: 100%;
+        }
+                
+    /* ------------------ FINAL: Parte Superior de la pagina ------------------ */
+
+    /* ------------------ INICO: Parte Media de la pagina ------------------ */
+    #envolturaContenido {
+        width: 100%;
+        clear: both;
+    }
+    
+        .panel {
+            width: 25%;
+        }
+        
+        .relleno {
+            padding: 10px;
+            overflow: auto;
+        }
+
+        #panelIzquierdo {
+            float: left;
+            display: none;
+        }
+        
+        #contenidoPrincipal {
+            float: left;
+            width: 100%;
+            background-color: #EEE;
+            margin-bottom: 20px;
+        }
+        
+        #panelDerecho {
+            float: right;
+            width: 25%;
+            /*display: none;*/
+        }
+        .limpiar{
+            clear: both;
+        }
+        .divDerecho{
+            position:relative;
+            float:right;
+            width:47%;
+        }
+        .divIzquierdo{
+            position:relative;
+            float:left;
+            width: 47%;
+        }
+        
+    /* ------------------  FINAL: Parte Media de la pagina ------------------ */
+    
+    /* ------------------ INICO: Parte Inferior de la pagina ------------------ */
+    #piePagina {
+        background-color: #C4C4C4;
+        height: 36px;
+        clear: both;
+        text-align: center;
+    }
+    #piePagina p {
+        font-weight: bold;
+        color: #666;
+        margin: 0;
+    }
+    
+    /* ------------------  FINAL: Parte Inferior de la pagina ------------------ */
+
+/* ------------------------ FIN: configuraciones de Layouts (dispocicion de la pagina) ------------------------ */
+
+
+    
+/* ------------------------ INICIO: Configuracion del Menu ------------------------ */
+/* Menu */
+#menuNavegacion {
+    text-align: center;
+    padding-top: 8px;
+}
+.navegacion li {
+    background-color: #787878; /* Establecemos el color de fondo: negro */
+    list-style: none; /* Eliminamos la "viñetas" de las listas */
+    z-index: 10;  /* Establecemos la posicion en Z ("distancia entre la pantalla y el usuario"). Cuanto mayor es el valor, mayor se acerca al usuario */
+    position: relative;  /* Establecemos la posicion de los LIs (items) a relativa, así posteriormente estableceremos a los ULs internos, la posicion absoluta respecto de los "padres" relativos */
+    text-align: left;  /* Establecemos la alineación de los textos dentro de los LIs */
+}
+.navegacion li a {
+    color: #FFF;  /* Establecemos el color de la fuente: blanco */
+    text-decoration: none; /* Eliminamos el subrayado */
+    padding: 10px 15px; /* Establecemos un relleno superior/inferior de 10px c/u, y laterales izq/der de 15px c/u */
+    display: block; /* Establecemos la forma en que el navegador "dibuja" los Links: como bloques en lugar de en-linea */
+    white-space: nowrap; /* Establecemos que los espacios en blanco NO se "generen un ENTER", y así el texto de c/item del menu se escribe en una sola línea */
+}
+.navegacion li:hover {
+    background-color: #333;
+}
+.navegacion > li {
+    display: inline-block;
+}
+.navegacion > li:last-child {
+    border-right: none;
+}
+.navegacion li ul {
+    display: none;
+    position: absolute;
+}
+.navegacion li:hover > ul {
+    display: block;
+}
+.navegacion > li ul {
+    top: 15%;
+    left: 100%;
+    padding-left: 1px;
+}
+
+.navegacion li.tieneSubMenu {
+    background: url("../img/flecha-submenu.png") no-repeat scroll 100% 50% #787878;
+    padding-right: 20px;
+}
+
+.navegacion li.tieneSubMenu:hover {
+    background-color: #333;
+}
+
+.navegacion li.tieneSubMenu > a {
+    cursor: default;
+}
+
+.navegacion > li .nivel1 {
+    top: 100%;
+    left: 0;
+    padding-top: 1px;
+    padding-left: 0;
+}
+.navegacion > li:last-child > a {
+                cursor: help;
+}
+
+
+/* ------------------------ FINAL: Configuracion del Menu ------------------------ */
+
+/* ------------------------ INICIO: Estilo de los formularios ------------------------ */
+/*.abmForm .mensajeError {
+    color: #EE0000;
+}*/
+.abmForm .obligatorio:before {
+    content: "*";
+}
+.abmForm .textoInformativo {
+    color: #EE0000;
+    display: block;
+    text-align: right;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+.abmForm {
+    background: #DDD;
+    padding: 10px 20px;
+}
+.abmForm fieldset {
+    border-radius: 5px;
+    border: 2px solid #888;
+    padding: 10px;
+}
+.abmForm legend {
+    margin-left: 50px;/*No utilizamos padding para que la linea no se separe del texto*/
+    padding: 0 5px;
+    font-size: 20px;
+}
+.abmForm p {
+    padding: 6px;
+    background-color: #D1D1D1;
+    margin: 0 5px 5px;
+}
+.abmForm label {
+    color: #444;
+    float: left;
+    font-weight: bold;
+    line-height: 23px;
+    margin-right: 7px;
+    width: 200px;
+}
+.abmForm label:after {
+    content: " :";
+}
+.abmForm input , .abmForm select {
+    padding: 4px;
+    border: 1px solid #999;
+    background-color: #ECF4FF;
+}
+.abmForm label.opciones{
+    color: #000;
+    float: none;
+    font-weight: normal;
+    margin: 0 10px 0 5px;
+}
+.abmForm label.opciones:after{
+    content: "";
+}
+.abmForm input:focus {
+    border:1px solid #666;
+    background-color: #DBEBFF;
+}
+.abmForm .textoLargo {
+    width: 200px;
+}
+.abmForm .textoMediano {
+    width: 150px;
+}
+.abmForm .textoCorto {
+    width: 100px;
+}
+.abmForm .numeroLargo {
+    width: 170px;
+    text-align: right;
+}
+.abmForm .numeroMediano {
+    width: 130px;
+    text-align: right;
+}
+.abmForm .numeroCorto {
+    width: 50px;
+    text-align: right;
+}
+.abmForm .fechaMediana {
+    width: 80px;
+    text-align: right;
+}
+.abmForm .fechaLarga {
+}
+.abmForm .fechaCorta {
+}
+.abmForm .moneda {
+    width: 80px;
+    text-align: right;
+}
+.abmForm .botones p {
+    background-color: transparent;/*Quitamos el color de fondo asignado a los parrafos en general*/
+    margin-top: 10px;
+    text-align: right;
+}
+.abmForm .botones .boton {
+    background-color: #E6E6E6;
+    border: 1px solid #969696;
+    color: #44708F;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    /*-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;*/
+    box-shadow: 0 1px 2px #303D47;
+    /*-moz-box-shadow: 0 1px 2px #303D47;
+    -webkit-box-shadow: 0 1px 2px #303D47;*/
+    padding-left: 21px;
+}
+.abmForm .botones .boton:hover {
+    background-color: #DCDCDC;
+    border: 1px solid #1F6191;
+    color: #1F6191;
+    cursor: pointer;
+}
+.abmForm .botones .boton:active {
+    box-shadow: 0 1px 2px #303D47 inset;
+    /*-moz-box-shadow: 0 1px 2px #303D47 inset;
+    -webkit-box-shadow: 0 1px 2px #303D47 inset;*/
+}
+.abmForm .botones .aceptar, .abmForm .botones .modificar {
+    background: url("../img/boton-aceptar_16x16.png") no-repeat scroll 5px 50% transparent;
+}
+.abmForm .botones .cancelar {
+    background: url("../img/boton-cancelar_16x16.png") no-repeat scroll 5px 50% transparent;
+    margin-left: 10px;
+}
+.abmForm .botones .eliminar {
+    background: url("../img/boton-eliminar_16x16.png") no-repeat scroll 5px 50% transparent;
+    margin-left: 50px;
+}
+.Calendario{
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+span.fechaCalendario{
+    color: #444;
+    cursor: default;
+}
+.abmForm .mensajeError{
+    color: #EE0000;
+    cursor: default;
+    background-image: none;
+    background-attachment: scroll;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: 100% 50%;
+    background-repeat: no-repeat no-repeat;
+    height: 24px;
+    padding-right: 24px;
+    line-height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.abmForm .error {
+    background-image: url('../img/alert.png') !important;
+    cursor: pointer;
+}
+.abmForm .error:after {
+    content: "Error, clic aquí.";
+}
+
+/* ------------------------ FINAL: Estilo de los formularios ------------------------ */
+
+
+/* ------------------------ INICIO: Estilo de los formularios ------------------------ */
+.tablaListado {
+    width: 100%;
+    margin: 0px 0;
+}
+.tablaListado th {
+    border-bottom: 2px solid #666;
+    border-top: 2px solid #666;
+    padding: 3px 0;
+    color: #333;
+}
+.tablaListado thead th {
+    background-color: #8F8F8F;
+    text-align: center;
+}
+.tablaListado tfoot th {
+    background-color: #D2D2D2;
+    text-align: right;
+    padding: 3px;
+}
+.tablaListado td {
+    border-bottom: 2px solid #FFF;
+    padding: 5px;
+}
+.tablaListado .impar td{
+    background-color: #F1F1F1;
+}
+.tablaListado .par td{
+    background-color: #E1E1E1;
+}
+.tablaListado tbody tr:hover td{
+    background-color: #319BC3;
+    color: #FFF;
+}
+.tablaListado .numero {
+    text-align: right;
+}
+.tablaListado tbody tr:hover td a{
+    background-color: #319BC3;
+    color: #FFF;
+}
+.nuevo {
+    text-decoration: none;
+}
+.nuevo img {
+    vertical-align: middle;
+    padding-left: 10px;
+}
+.nuevo span{
+    color: #2A7CAE;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ------------------------ FINAL: Estilo de los formularios ------------------------ */
+
+/* ------------------------ INICIO: Estilo de los listados ------------------------ */
+.tablaListado {
+    width: 100%;
+    margin: 0px 0;
+}
+.tablaListado th {
+    border-bottom: 2px solid #666;
+    border-top: 2px solid #666;
+    padding: 3px 0;
+    color: #333;
+}
+.tablaListado thead th {
+    background-color: #8F8F8F;
+    text-align: center;
+}
+.tablaListado tfoot th {
+    background-color: #D2D2D2;
+    text-align: right;
+    padding: 3px;
+}
+.tablaListado td {
+    border-bottom: 2px solid #FFF;
+    padding: 5px;
+
+
+}
+.tablaListado .impar td {
+    background-color: #F1F1F1;
+}
+.tablaListado .par td {
+    background-color: #E1E1E1;
+}
+.tablaListado tbody tr:hover td, .tablaListado tbody tr:hover td a {
+    background-color: #319BC3 !important;
+    color: #FFF;
+}
+.tablaListado .numero {
+    text-align: right;
+}
+.tablaListado .accion{
+    text-align: center;
+}
+/* ------------------------ FINAL: Estilo de los listados ------------------------ */
+
+img.calendario {
+    vertical-align: middle;
+    margin-right: 20px;
+    cursor: pointer;
+}
+span.fechaCalendario {
+    color: #444;
+}
+/* ------------------------ INICIO: Estilo de las Tablas de Busqueda ------------------------ */
+.abmForm input.campoBusqueda , input.campoBusqueda{
+    background: url("../img/ver.gif") no-repeat scroll 5px center #FFF;
+    border: 1px solid #BCBBBB;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+    font-size: 16px;
+    height: 34px;
+    outline: medium none;
+    padding: 1px 0px 2px 35px;
+    width: 200px;
+}
+.contenedorCabeceraTabla  > span {
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    background-color: #8F8F8F;
+    display: inline-block;
+    height: 24px;
+    width: 20px;
+    border-top: 2px solid #666;
+    border-bottom: 2px solid #666;
+}
+.contenedorCabeceraTabla table {
+    /* padding-right: 17px; */
+    width: calc(100% - 17px);
+}
+.contenedorCabeceraTabla table thead tr th {
+    width: 40%;
+}
+.contenedorCabeceraTabla table thead tr th + th {
+    width: 30%;
+}
+.contenedorCabeceraTabla table thead tr th + th + th {
+    width: 20%;
+}
+.contenedorCabeceraTabla table thead tr th + th + th + th {
+    width: 10%;
+}
+
+.contenedorCuerpoTabla {
+    overflow-y: scroll;
+    height: 200px;
+}
+.contenedorCuerpoTabla table tbody tr td {
+    width: 40%;
+}
+.contenedorCuerpoTabla table tbody tr td + td {
+    width: 30%;
+}
+.contenedorCuerpoTabla table tbody tr td + td + td {
+    width: 20%;
+}
+.contenedorCuerpoTabla table tbody tr td + td + td + td {
+    width: 10%;
+}
+.solapas {
+
+}
+.solapas .tabs {
+    border-bottom: 1px solid #333;
+}
+.solapas .tabs  li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    margin: 0 5px -2px 0;
+    border: 1px solid #333;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 0;
+    white-space: nowrap;
+}
+.solapas .tabs  li.tabActiva {
+    background-color: #FFF;
+    border-bottom: 1px solid #FFF;
+    margin-bottom: -2px;
+}
+.solapas .tabs li a {
+    float: left;
+    padding: .5em 1em;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.solapas .solapa {
+    display: none;
+    padding-top: 10px;
+}
+.solapas div.divActiva {
+    display: block;
+}
+.contenedorCuerpoTabla .tablaListado{
+    cursor: hand;
+}
+
+
+/* ------------------------ FIN: Estilo de las Tablas de Busqueda ------------------------ */
+
+#formIzquierdo{
+    position:relative;
+    float:left;
+    width: 47%;
+}
+#formDerecho{
+    position:relative;
+    float:right;
+    width:47%;
+}
+#formDetalle{
+    clear:both;
+}
+fieldset{
+    border-radius: 5px;
+    border: 2px solid #888;
+    padding: 10px;
+}
+legend {
+    margin-left: 50px;
+    padding: 0 5px;
+    font-size: 20px;
+}
+.iconCenter:last-child{
+    text-align: center;
+}
+.subTotal td{
+    font-weight: bold;
+}
+.titulo{
+    text-align: center;
+}
+.movimientos{
+    overflow-y: scroll;
+}
+.load{
+    font-weight: bold;
+    text-align: center;
+}
+.gastos{
+    width:17%;
+}
+.spanNone{
+    display: none;
+}
+.none{
+    display: none;
+}
+.inputCenter{
+    text-align: right;
+    width: 50px;
+}
+.tablaListado .izquierdo{
+    text-align: left;
+}

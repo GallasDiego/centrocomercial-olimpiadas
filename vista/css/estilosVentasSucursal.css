@@ -1,0 +1,66 @@
+
+
+/*..INICIO: Configuracion formulario de Estadistica de ventas por sucursal*/
+	
+	.fechaDesdeHasta  span{
+	
+		line-height: 24px;
+		color: #444444;
+	}
+	
+	.divIzquierdo div{
+		height: 92px;
+		width: 101%;
+
+	}
+	.divDerecho div{
+		height: 92px;	
+
+	}
+	
+	.estVentasPorSucursal p {
+		
+		height: 80%;
+		line-height:60px;
+	
+	
+	}
+	
+	.estVentasPorSucursal label {
+		
+		line-height: 60px;
+		width: 95px;
+
+	}
+
+	.fechaHoraActual .divDerecho span{
+		
+		margin-left: 7px;
+	
+	}
+	
+	.fechaHoraActual .divIzquierdo span{
+		
+		margin-left: 10px;
+	
+	}
+	.fechaHoraActual .divIzquierdo label{
+		
+		width: 12%;
+		float:none;
+	
+	}
+	.fechaHoraActual .divDerecho label{
+		
+		width: 12%;
+		float:none;
+	
+	}
+	.divInferior  .listadoTransferencia{
+			
+		height: 35%;
+		overflow-y: scroll;
+	
+	}
+
+/*FIN: Configuracion formulario*/

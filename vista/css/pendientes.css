@@ -1,0 +1,29 @@
+/*.limpiar{
+    clear: both;
+}*/
+.listados{
+    border-radius: 5px;
+    border: 2px solid #888;
+    padding: 10px;
+    height: 70px;
+}
+span{
+	color: black;
+    font-size: 14px;
+    font-weight: bold;
+    float: right;
+	font-style : italic;
+    padding: 5px;
+}
+#formIzquierdo span{
+    float: none;
+}
+.labelFechaHora{		
+		font-style : italic;
+		padding-left: 10px;
+}
+#formIzquierdo label{
+    width: 80px;
+    float : none;
+    padding-left: 6px;
+}

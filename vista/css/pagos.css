@@ -1,0 +1,32 @@
+.abmForm p{
+	height : 26px;
+}
+
+.abmForm #razonSocial, .abmForm #direccion, .abmForm #localidad{
+	font-weight : bold;
+}
+
+.abmForm #cabeceraImputacion th , .abmForm #cuerpoImputacion td{
+	width : 20%;
+}
+
+.abmForm .contenedorCuerpoTabla {
+	height : 260px;
+}
+
+.abmForm .contenedorCuerpoTabla .tablaImputacion{
+	height : 114px;	
+}
+
+.abmForm #laTabla {
+	height : auto;
+}
+
+.abmForm .divDerecho fieldset {
+	height : 386px;
+}
+
+.abmForm #tbodyProveedores {
+	cursor : pointer;
+}
+
