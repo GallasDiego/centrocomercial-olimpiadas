@@ -5,6 +5,7 @@
        <ul class="nivel1">
             
            <li><a href="<?php echo BASE_URL; ?>/vista/abm/empleados/administrarEmpleados.php">Empleados</a></li>
+           <li><a href="<?php echo BASE_URL; ?>/vista/abm/actividad/administrarActividad.php">Actividad</a></li>
         </ul>
    </li>
     <li><a href="">Procesos</a>

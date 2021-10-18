@@ -42,9 +42,9 @@
                     telefono = ?,
                     edificio_idedificio = ?
                 WHERE  idempleados = ?";
-
+            
             $insert = $this->db->prepare($consulta);
-            echo $insert;
+            
             return $insert->execute($valores);
         }
 

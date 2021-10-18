@@ -51,6 +51,7 @@
                 $idempleados
 
             );
+           
             $dbEmpleados->actualizarEmpleado($valores);
         }
     }
