@@ -10,9 +10,13 @@
     $idempleados = isset($_POST['idempleados']) && (int)$_POST['idempleados'] > 0 ? (int)$_POST['idempleados'] : '';
 
     $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+
     $dni = isset($_POST['dni']) ? $_POST['dni'] : '';
+
     $horarioEntrada = isset($_POST['horarioEntrada']) ? $_POST['horarioEntrada'] : '';
+
     $horarioSalida = isset($_POST['horarioEntrada']) ? $_POST['horarioEntrada'] : '';
+    
     $telefono = isset($_POST['telefono']) ? $_POST['telefono'] : '';
     $edificio_idedificio = isset($_POST['edificio_idedificio']) && (int)$_POST['edificio_idedificio'] > 0 ? (int)$_POST['edificio_idedificio'] : '';
 

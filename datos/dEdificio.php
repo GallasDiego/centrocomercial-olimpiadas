@@ -6,27 +6,24 @@
 
 
 
-    class Edifcio extends BaseDatos{
+    class Edificio extends BaseDatos{
         
         function __construct()
         {
             parent::__construct();
             
-            $this->nombreTabla = 'Edifcio';
+            $this->nombreTabla = 'edificio';
         }
 
 
         public function insertarEdifico($valores) {
             $consulta = "
-                        INSERT INTO edifico (
-                            idedifico,
-                            dni
-                            horarioEntrada,
-                            horarioSalida,
-                            telefono,
-                            edificio_idedificio
+                        INSERT INTO edificio (
+                            direccion,
+                            tamanio,
+                            piso
                             )
-                        VALUES (?, ?, ?, ?, ?, ?);";
+                        VALUES (?, ?, ?);";
             $insert = $this->db->prepare($consulta);
             return $insert->execute($valores);
         }
@@ -34,30 +31,24 @@
 
         public function actualizarEmpleado($valores){
             $consulta = "
-                UPDATE empleados SET 
-                    nombre = ?,
-                    dni = ?,
-                    horarioEntrada = ?,
-                    horarioSalida = ?,
-                    telefono = ?,
-                    edificio_idedificio = ?
-                WHERE  idempleados = ?";
+                UPDATE edificio SET 
+                    direccion = ?,
+                    tamanio = ?,
+                    piso = ?
+                WHERE  idedificio = ?";
             
             $insert = $this->db->prepare($consulta);
             
             return $insert->execute($valores);
         }
 
-        public function listarEmpleados($ordenarPor = '', $desde = 0, $cantidad = 10){
+        public function listarEdifcios($ordenarPor = '', $desde = 0, $cantidad = 10){
             $consulta = "
-            SELECT idempleados, 
-                    nombre, 
-                    dni, 
-                    horarioEntrada AS entrada, 
-                    horarioSalida AS salida, 
-                    telefono, 
-                    edificio_idedificio AS  edificio
-            FROM empleados ".
+            SELECT idedificio, 
+                    direccion, 
+                    tamanio, 
+                    piso 
+            FROM edificio ".
             ($ordenarPor ? " ORDER BY " .$ordenarPor. " LIMIT " .$desde. ", ".$cantidad : "" ). ";";
             $select = $this->db->prepare($consulta);
             $select->execute();
